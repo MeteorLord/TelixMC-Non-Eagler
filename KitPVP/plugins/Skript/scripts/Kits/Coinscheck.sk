@@ -1,0 +1,58 @@
+command ///coincheck [<text>]:
+	trigger:
+		#Kit upgrades
+		if arg-1 is "upgradeII":
+			if {upgradedII.s.%player%} is false:
+				if {unlocked.w.%player%} is true:
+					if {coins.%player%} >= 3200:
+						set {upgradedI.w.%player%} to false
+						set {upgradedII.s.%player%} to true
+						set {unlocked.s.%player%} to true
+						remove 3200 from {coins.%player%}
+						close player's inventory
+						make player execute command "/kits upgrades"
+					else:
+						message "&cYou don't have enough coins."
+				else:
+					message "&cYou haven't unlocked upgradeI."
+					
+		if arg-1 is "upgradeI":
+			if {upgradedI.w.%player%} is false:
+				if {coins.%player%} >= 1500:
+					set {upgradedI.w.%player%} to true
+					set {unlocked.w.%player%} to true
+					remove 1500 from {coins.%player%}
+					close player's inventory
+					make player execute command "/kits upgrades"
+				else:
+					message "&cYou don't have enough coins."
+		#Shop			
+		if arg-1 is "repairall":
+			if "%region at player%" doesn't contain "arenaspawn":
+				if {coins.%player%} >= 80:
+					if {upgradedII.s.%player%} is true:
+						set player's chestplate to gold chestplate of unbreaking 1
+						set player's leggings to gold leggings of unbreaking 1
+						set player's boots to gold boots of unbreaking 1
+						remove 80 from {coins.%player%}
+						stop	
+			
+					if {upgradedI.w.%player%} is true:
+						set player's helmet to iron helmet
+						set player's chestplate to iron chestplate
+						set player's leggings to iron leggings
+						set player's boots to iron boots
+						remove 80 from {coins.%player%}
+						stop				
+				
+					if {upgradedI.w.%player%} is false:
+						set player's helmet to iron helmet
+						set player's chestplate to chain chestplate
+						set player's leggings to chain leggings
+						set player's boots to iron boots
+						remove 80 from {coins.%player%}
+						stop
+				else:
+					message "&cYou don't have enough coins."
+			else:
+				message "&cYou can't do this in spawn."

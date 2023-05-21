@@ -1,0 +1,21 @@
+command /report [<player>] [<text>]:
+    trigger:
+        if arg-1 is not "%player%":
+            if arg-1 is set:
+                if arg-2 is set:
+                    set {_waited} to difference between {cooldown.%player%} and now
+                    if {_waited} is less than 6 seconds:
+                        message "&cYou are on a cooldown for %difference between 5 seconds and {_waited}%"
+                        stop
+                    else:
+                        message "&6Your report has been submitted."
+                        loop all players:
+                            if loop-player has permission "kinglonmc.reports":
+                                send "&c&lREPORT!" to loop-player
+                                send "&6%player% &7reported &6%arg-1%" to loop-player
+                                send "&7Reason: &6%arg-2%" to loop-player
+                                set {cooldown.%player%} to now
+            else:
+                send "&7Usage: &c/report [player] [reason]" to player
+        else:
+            message "&cYou cannot report yourself."

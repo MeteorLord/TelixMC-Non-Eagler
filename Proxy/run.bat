@@ -1,0 +1,1 @@
+java -Xmx100M -Xms100M -jar server.jar nogui

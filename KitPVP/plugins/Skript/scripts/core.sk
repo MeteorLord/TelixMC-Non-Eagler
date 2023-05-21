@@ -1,0 +1,43 @@
+command /help:
+  trigger:
+    send "&c&lNo" to player 
+	
+command /me:
+  trigger:
+    send "&c&lNo" to player
+	
+command /helpop:
+  trigger:
+    send "&c&lNo" to player
+	
+command /minecraft:me:
+  trigger:
+    send "&c&lNo" to player
+	
+command /essentials:me:
+  trigger:
+    send "&c&lNo" to player
+
+command /pl:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /plugins:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /bukkit:?:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /?:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /essentials:help:
+  trigger:
+    send "&c&lNo" to player
+	
+command /essentials:helpop:
+  trigger:
+    send "&c&lNo" to player 

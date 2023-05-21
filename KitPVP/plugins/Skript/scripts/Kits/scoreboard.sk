@@ -1,0 +1,39 @@
+on death of player:
+    loop all players:
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "&6server [Beta]"
+        set score "&6Coins: &7%{coins.%loop-player%}%" in sidebar of loop-player to 4
+        set score "&6Kills: &7%{kills.%loop-player%}%" in sidebar of loop-player to 3
+        set score "&6Killstreak: &7%{killstreak.%loop-player%}%" in sidebar of loop-player to 2
+        set score "&6Online: &f%number of all players%&8/&f13" in sidebar of loop-player to 1
+        set score "&6IP: &7none" in sidebar of loop-player to 0
+		
+on join:
+	if {kills.%player%} is not set:
+		set {kills.%player%} to 0
+	if {deaths.%player%} is not set:
+		set {deaths.%player%} to 0
+	if {coins.%player%} is not set:
+		set {coins.%player%} to 0
+	if {killstreak.%player%} is not set:
+		set {killstreak.%player%} to 0
+		
+on join:
+    loop all players:
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "&6server [Beta]"
+        set score "&6Coins: &7%{coins.%loop-player%}%" in sidebar of loop-player to 4
+        set score "&6Kills: &7%{kills.%loop-player%}%" in sidebar of loop-player to 3
+        set score "&6Killstreak: &7%{killstreak.%loop-player%}%" in sidebar of loop-player to 2
+        set score "&6Online: &f%number of all players%&8/&f13" in sidebar of loop-player to 1
+        set score "&6IP: &7none" in sidebar of loop-player to 0
+
+every 10 seconds:
+    loop all players:
+        wipe loop-player's sidebar
+        set name of sidebar of loop-player to "&6server [Beta]"
+        set score "&6Coins: &7%{coins.%loop-player%}%" in sidebar of loop-player to 4
+        set score "&6Kills: &7%{kills.%loop-player%}%" in sidebar of loop-player to 3
+        set score "&6Killstreak: &7%{killstreak.%loop-player%}%" in sidebar of loop-player to 2
+        set score "&6Online: &f%number of all players%&8/&f13" in sidebar of loop-player to 1
+        set score "&6IP: &7none" in sidebar of loop-player to 0

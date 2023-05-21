@@ -1,0 +1,31 @@
+command /spawn [<player>]:
+	trigger:
+		if arg-1 is not set:
+			teleport player to {spawn}
+		if player has permission "spawn.others":
+			if arg-1 is set:
+				teleport arg-1 to {spawn}
+command /setspawn:
+	trigger:
+		if player has permission "*":
+			set {spawn} to location of player
+			message "&6Spawn set."
+		
+command /delspawn:
+	trigger:
+		if player has permission "*":
+			delete {spawn}
+		
+on join:
+	teleport player to {spawn}
+	wait 3 ticks
+	broadcast "&e%player% joined."
+	stop
+on quit:
+	if {vanish.%player%} is not set:
+		broadcast "&e%player% quit."
+
+on first join:
+	wait 3 ticks
+	teleport player to {spawn}
+	make player execute command "/@kit pvp"

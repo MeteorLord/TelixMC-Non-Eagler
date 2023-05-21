@@ -1,0 +1,15 @@
+command /pl:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /plugins:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /bukkit:?:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player
+	
+command /?:
+  trigger:
+    send "&fPlugins (1): &aservercore" to player

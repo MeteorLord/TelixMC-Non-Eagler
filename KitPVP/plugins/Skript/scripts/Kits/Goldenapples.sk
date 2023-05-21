@@ -1,0 +1,33 @@
+#Golden apple
+on rightclick with golden apple:
+	if "%region at player%" contains "arenaspawn":
+		cancel event
+		
+on rightclick with golden apple:
+	if "%region at player%" doesn't contain "arenaspawn":
+		cancel event
+		wait 3 ticks
+		apply absorption 1 to player for 21 seconds
+		remove 1 golden apple from player
+		stop
+
+#Cancel Fall damage
+on region enter:
+	wait 3 ticks
+	if "%region at player%" contains "arena":
+		set {falldamage.%player%} to true
+		wait 5 ticks
+		set {falldamage.%player%} to false
+on region enter:
+	wait 3 ticks
+	if "%region at player%" contains "upperarena":
+		set {falldamage.%player%} to true
+		wait 5 ticks
+		set {falldamage.%player%} to false
+		
+		
+on damage:
+	if damage was caused by fall:
+		if {falldamage.%victim%} is true:
+			cancel event
+		

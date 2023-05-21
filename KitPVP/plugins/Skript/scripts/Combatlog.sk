@@ -1,0 +1,57 @@
+on damage:
+	if attacker is a player:
+		if victim is a player:
+			if {ss.%attacker%} is false:
+				if {combatlog.%attacker%} = 0:
+					message "&b%attacker% &7combat tagged you" to victim
+					message "&7You have combat tagged &b%victim%" to attacker
+				set {combatlog.%attacker%} to 1
+every 1 second:
+	loop all players:
+		if {combatlog.%loop-player%} > 0:
+			add 1 to {combatlog.%loop-player%} 
+	loop all players:
+		if {combatlog.%loop-player%} > 30:
+			set {combatlog.%loop-player%} to 0
+			message "&7You are no longer in combat." to loop-player
+on command "spawn":
+	if {combatlog.%player%} > 0:
+		cancel event
+		message "&7That command is not allowed during Combat." to player
+on respawn:
+	set {combatlog.%player%} to 0
+	message "&7You are no longer in combat." to player
+on quit:
+	if {combatlog.%player%} > 0:
+		set {combatlog.%player%} to 0				
+			
+on damage:
+	if attacker is a player:
+		if victim is a player:
+			set {voidkillt.%victim%} to true
+			if {voidkillt.%victim%} is true:
+				set {voidkill.%victim%} to "%attacker%"
+				wait 30 seconds
+				delete {voidkill.%victim%}
+				set {voidkillt.%victim%} to false
+				stop
+			
+on damage:
+	if damage cause is void:	
+		launch ball large coloured red, purple and white fading to light green and black at victim's location with duration 1.2
+		kill victim
+		if {voidkillt.%victim%} is true:
+			add 21 to {coins.%{voidkill.%victim%}%}
+			add 1 to {kills.%{voidkill.%victim%}%}
+			message "&6You have been killed by %{voidkill.%victim%}%&6." to victim
+			message "&6You have killed %victim%&6 for 21 Credits." to {combatlog.%victim%}
+			wait 3 ticks
+			set {voidkillt.%victim%} to false
+		else:
+			if {coins.%victim%} > 0:
+				message "&6You have been killed by Void. %nl%&6You lost &c-7 &6Coins." to victim
+				remove 7 from {coins.%victim%}
+			else:	
+				message "&6You have been killed by Void." to victim		
+		delete {voidkill.%victim%}
+		stop

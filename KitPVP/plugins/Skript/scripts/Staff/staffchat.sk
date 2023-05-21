@@ -1,0 +1,164 @@
+command /staffchat [<text>]:
+	trigger:
+		if player has permission "staff.chat":
+			if arg-1 is set:
+				loop all players:
+					if loop-player has permission "staff.chat":
+						message "&6&o[Staff] &7[%world%&7] %{sprefix.%player%}%: &f%arg-1%" to loop-player
+			else:
+				message "usage: /staffchat <message>"
+		else:
+			message "Unknown command. Type ''/help'' for help."
+on chat:
+	if player has permission "staff.chat":
+		if message contains "##":
+			set {msg} to message
+			cancel event
+			replace all "##" with "" in {msg}
+			loop all players:
+				if loop-player has permission "staff.chat":
+					message "&6&o[Staff] &7[%world%&7] %{sprefix.%player%}%:&f%{msg}%" to loop-player
+					
+					
+on join:
+	wait 5 ticks
+	if player has permission "essentials.staff":
+		loop all players:
+			loop-player has permission "essentials.staff":
+				message "&6&o[S] %{sprefix.%player%}% &7joined. &7[%world%&7]" to loop-player
+on quit:
+	wait 5 ticks
+	if player has permission "essentials.staff":
+		loop all players:
+			loop-player has permission "essentials.staff":
+				message "&6&o[S] %{sprefix.%player%}% &7disconnected from &7[%world%&7]" to loop-player			
+on join:
+	if player has permission "staff.ownerp":
+		set {sprefix.%player%} to "&6%player%"
+		stop
+	if player has permission "staff.managerp":
+		set {sprefix.%player%} to "&d%player%"
+		stop
+	if player has permission "staff.devp":
+		set {sprefix.%player%} to "&b%player%"
+		stop
+	if player has permission "staff.adminp":
+		set {sprefix.%player%} to "&c%player%"
+		stop
+	if player has permission "staff.srmodp":
+		set {sprefix.%player%} to "&c%player%"
+		stop
+	if player has permission "staff.modp":
+		set {sprefix.%player%} to "&e%player%"
+		stop
+	if player has permission "staff.jmodp":
+		set {sprefix.%player%} to "&e%player%"
+		stop
+	if player has permission "staff.traineep":
+		set {sprefix.%player%} to "&e%player%"
+		stop
+
+#Freeze 
+on damage:
+	if {ss.%victim%} is true:
+		cancel event
+		message "&6That player is currently frozen." to attacker
+	if {ss.%attacker%} is true:
+		cancel event
+
+on any movement:
+	if {ss.%player%} is true:
+		cancel event
+		message "&cDiscord: https://discord.com %nl%&cYou are currently frozen."
+on join:
+	set {ss.%player%} to false
+	
+command /ss [<player>]:
+	trigger:
+		if player has permission "essentials.ss":
+			if arg-1 is set:
+				if {ss.%arg-1%} is false:
+					set {ss.%arg-1%} to true
+					set arg-1's walk speed to 0
+					message "You have frozen %arg-1%."
+					stop
+				if {ss.%arg-1%} is true:
+					set {ss.%arg-1%} to false
+					set arg-1's walk speed to 0.2
+					message "You have unfrozen %arg-1%."
+					stop
+		
+command /vanish:
+	trigger:
+		if player has permission "essentials.vanish":
+			if {vanish.%player%} is not set:
+				set {vanish.%player%} to true
+				message "&fYou are now vanished."
+				set tablist name of player to "&7%player%"
+				loop all players:
+					loop-player has permission "essentials.view":
+						message "&7[%{sprefix.%player%}%&7: vanished]" to loop-player
+						loop-player has permission "vanish.see":
+							add loop-player to {vanishsee.%player%::*}
+						hide player from all players
+						wait 5 tick
+						reveal player to {vanishsee.%player%::*}
+						reveal {vanishsee.%player%::*} to loop-player
+			else:
+				if {vanish.%player%} is true:
+					delete {vanish.%player%}
+					delete {vanishsee.%player%::*}
+					set tablist name of player to "&f%player%"
+					reveal player from all players
+					message "&fYou are no longer vanished."
+					loop all players:
+						loop-player has permission "essentials.vanish":
+							message "&7[%{sprefix.%player%}%&7: unvanished]" to loop-player
+		else:
+			message "&cYou do not have permission to execute this command!"
+	
+command /v:
+	trigger:
+		if player has permission "essentials.vanish":
+			if {vanish.%player%} is not set:
+				set {vanish.%player%} to true
+				message "&fYou are now vanished."
+				set tablist name of player to "&7%player%"
+				loop all players:
+					loop-player has permission "essentials.view":
+						message "&7[%{sprefix.%player%}%&7: vanished]" to loop-player
+						loop-player has permission "vanish.see":
+							add loop-player to {vanishsee.%player%::*}
+						hide player from all players
+						wait 5 tick
+						reveal player to {vanishsee.%player%::*}
+						reveal {vanishsee.%player%::*} to loop-player
+			else:
+				if {vanish.%player%} is true:
+					delete {vanish.%player%}
+					delete {vanishsee.%player%::*}
+					set tablist name of player to "&f%player%"
+					reveal player from all players
+					message "&fYou are no longer vanished."
+					loop all players:
+						loop-player has permission "essentials.vanish":
+							message "&7[%{sprefix.%player%}%&7: unvanished]" to loop-player
+		else:
+			message "&cYou do not have permission to execute this command!"
+			
+on join:
+	loop all players:
+		if {vanish.%loop-player%} is true:
+			hide loop-player from player
+	if {vanish.%player%} is true:
+		delete {vanish.%player%}
+		delete {vanishsee.%player%::*}
+
+on join:
+	if player has permission "vanish.see":
+		loop all players:
+			if loop-player has permission "vanish.see":
+				add player to {vanishsee.%player%::*}
+				wait 1 second
+				reveal loop-player to {vanishsee.%player%::*}
+				reveal {vanishsee.%player%::*} to loop-player

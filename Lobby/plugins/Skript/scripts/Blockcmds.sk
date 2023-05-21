@@ -1,0 +1,60 @@
+#Blocker
+on command "/minecraft:me":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/say":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/help":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/me":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/give":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/effect":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:effect":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:give":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:enchant":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/enchant":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/heal":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:heal":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/minecraft:kill":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on command "/kill":
+	message "Unknown command. Type ""/help"" for help."
+	cancel event
+on place of command block:
+	cancel event
+on place of tnt:
+	cancel event
+on click on command block:
+	cancel event
+on click on Furnace:
+	cancel event
+on explosion:
+	cancel event
+ 

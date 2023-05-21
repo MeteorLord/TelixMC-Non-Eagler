@@ -1,0 +1,23 @@
+command /bc [<text>]:
+  permission: server.bc
+  trigger:
+    if arg-1 is set:
+      broadcast "&9server &f%colored arg-1%"
+    else:
+      send "&9server &cPlease provide an argument!"
+
+command /broadcast [<text>]:
+  permission: server.bc
+  trigger:
+    if arg-1 is set:
+      broadcast "&9server &f%colored arg-1%"
+    else:
+      send "&9server &cPlease provide an argument!"
+
+command /server [<text>]:
+  permission: server.bc
+  trigger:
+    if arg-1 is set:
+      broadcast "&9server &f%colored arg-1%"
+    else:
+      send "&9server &cPlease provide an argument!"

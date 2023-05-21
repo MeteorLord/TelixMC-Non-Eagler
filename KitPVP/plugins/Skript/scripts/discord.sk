@@ -1,0 +1,11 @@
+command /discord:
+	trigger:
+		send formatted "<link:>&6&lDiscord &f> &7Click here!<reset>"
+
+every 15 minutes:
+	loop all players:
+		send formatted "<link:>&9Server &8- &7Join our Discord Server to keep you updated!<reset>" to loop-player
+
+on command "rules":
+	cancel event
+	message "&6&lDiscord &f> &7Click here for our rules!"

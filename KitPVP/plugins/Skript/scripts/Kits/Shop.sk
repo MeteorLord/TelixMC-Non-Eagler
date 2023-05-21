@@ -1,0 +1,11 @@
+command /shop:
+	trigger:
+		open chest with 1 row named "Shop" to player
+		set slot 0 of player's current inventory to chain chestplate named "&6Repair All" with lore "&7Click here to Repair All" and "&7purchase for 80 coins."
+on inventory click:
+	if name of player's current inventory is "Shop":
+		cancel event
+on inventory click:
+	if name of player's current inventory is "Shop":
+		if clicked slot is 0:
+			make player execute command "///coincheck repairall"

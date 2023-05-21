@@ -1,0 +1,17 @@
+every second:
+	loop all players:
+		add 1 to {seconds::%loop-player's uuid%}
+		if {seconds::%loop-player's uuid%} is 60:
+			set {seconds::%loop-player's uuid%} to 0
+			add 1 to {minutes::%loop-player's uuid%}
+			if {minutes::%loop-player's uuid%} is 60:
+				add 1 to {hours::%loop-player's uuid%}
+				set {minutes::%loop-player's uuid%} to 0
+		set {playtime::%loop-player's uuid%} to "&f%{seconds::%loop-player's uuid%}% secs, %{minutes::%loop-player's uuid%}% mins, %{hours::%loop-player's uuid%}% hours."
+		
+command /playtime [<offlineplayer>]:
+	trigger:
+		if arg-1 is not set:
+			send "&7&lPlaytime &6Your &6playtime &6is: &F%{playtime::%player's uuid%}%"
+		else:
+			send "&7&lPlaytime &6%arg-1%&6's &6playtime &6is&6: &F%{playtime::%arg-1's uuid%}%"

@@ -1,0 +1,183 @@
+[20:28:09] [main/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[20:28:10] [main/INFO]: Reloading ResourceManager: Default, bukkit
+[20:28:11] [Worker-Main-3/INFO]: Loaded 7 recipes
+[20:28:12] [Server thread/INFO]: Starting minecraft server version 1.16.5
+[20:28:12] [Server thread/INFO]: Loading properties
+[20:28:12] [Server thread/INFO]: This server is running Paper version git-Paper-790 (MC: 1.16.5) (Implementing API version 1.16.5-R0.1-SNAPSHOT)
+[20:28:12] [Server thread/INFO]: Debug logging is disabled
+[20:28:12] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[20:28:12] [Server thread/INFO]: Using 4 threads for Netty based IO
+[20:28:13] [Server thread/INFO]: Default game type: SURVIVAL
+[20:28:13] [Server thread/INFO]: Generating keypair
+[20:28:13] [Server thread/INFO]: Starting Minecraft server on *:25575
+[20:28:13] [Server thread/INFO]: Using epoll channel type
+[20:28:13] [Server thread/ERROR]: Ambiguous plugin name `Skellett' for files `plugins/Skellett-Legacy.jar' and `plugins/Skellet.jar' in `plugins'
+[20:28:13] [Server thread/ERROR]: Ambiguous plugin name `skRayFall' for files `plugins/skRayFallv1.9.23.jar' and `plugins/skRayFall.jar' in `plugins'
+[20:28:13] [Server thread/WARN]: Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
+[20:28:20] [Server thread/WARN]: Legacy plugin BackToTheRoots v2.1.0 does not specify an api-version.
+[20:28:21] [Server thread/WARN]: Legacy plugin TuSKe v1.8.2-Pikachu-Patch-3-MH-1 does not specify an api-version.
+[20:28:21] [Server thread/INFO]: [BackToTheRoots] Loading BackToTheRoots v2.1.0
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Loading ProtocolSupport v1.16.5-3
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] File log is not enabled
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Detected Spigot server implementation type
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Login threads keep alive time: 60
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Status threads max count: 2, keep alive time: 60
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Packet data pool per io thread capacity: 50 (total ~200 spread to 4 io threads)
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Assume 1.5.2 ping delay: 100
+[20:28:21] [Server thread/INFO]: [ProtocolSupport] Assume legacy ping delay: 200
+[20:28:25] [Server thread/INFO]: [ProtocolSupport] Compression level: 3
+[20:28:25] [Server thread/INFO]: [ViaVersion] Loading ViaVersion v4.6.2
+[20:28:25] [Server thread/INFO]: [ViaVersion] ViaVersion 4.6.2 is now loaded. Registering protocol transformers and injecting...
+[20:28:25] [Via-Mappingloader-0/INFO]: [ViaVersion] Loading block connection mappings ...
+[20:28:26] [Server thread/INFO]: [ViaRewind] Loading ViaRewind v2.0.3
+[20:28:26] [Server thread/INFO]: [LuckPerms] Loading LuckPerms v5.3.47
+[20:28:27] [Via-Mappingloader-0/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[20:28:27] [Server thread/INFO]: [Vault] Loading Vault v1.7.3-b131
+[20:28:27] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v7.2.5+57d5ac9
+[20:28:28] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@5bebbab]
+[20:28:28] [Server thread/INFO]: [WorldGuard] Loading WorldGuard v7.0.5+3827266
+[20:28:28] [Server thread/INFO]: [CoreProtect] Loading CoreProtect v19.4
+[20:28:28] [Server thread/INFO]: [Skript] Loading Skript v2.5.3
+[20:28:28] [Server thread/INFO]: [SkBee] Loading SkBee v1.11.2
+[20:28:28] [Server thread/INFO]: [SkQuery] Loading SkQuery v4.1.4
+[20:28:28] [Server thread/INFO]: [Skellett] Loading Skellett v1.9.11
+[20:28:28] [Server thread/INFO]: [skRayFall] Loading skRayFall v1.9.23
+[20:28:28] [Server thread/INFO]: [TuSKe] Loading TuSKe v1.8.2-Pikachu-Patch-3-MH-1
+[20:28:28] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[20:28:28] [Server thread/INFO]: [ProtocolSupport] Enabling ProtocolSupport v1.16.5-3
+[20:28:28] [Server thread/INFO]: [ViaRewind] Enabling ViaRewind v2.0.3
+[20:28:28] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.3.47
+[20:28:28] [Server thread/INFO]:         __    
+[20:28:28] [Server thread/INFO]:   |    |__)   LuckPerms v5.3.47
+[20:28:28] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[20:28:28] [Server thread/INFO]: 
+[20:28:28] [Server thread/INFO]: [LuckPerms] Loading configuration...
+[20:28:29] [Server thread/INFO]: [LuckPerms] Loading storage provider... [H2]
+[20:28:29] [Server thread/INFO]: [LuckPerms] Loading internal permission managers...
+[20:28:29] [Server thread/INFO]: [LuckPerms] Performing initial data load...
+[20:28:29] [Server thread/INFO]: [LuckPerms] Successfully enabled. (took 1621ms)
+[20:28:29] [Server thread/INFO]: [Vault] Enabling Vault v1.7.3-b131
+[20:28:30] [Server thread/INFO]: [Vault] [Permission] SuperPermissions loaded as backup permission system.
+[20:28:30] [Server thread/INFO]: [Vault] Enabled Version 1.7.3-b131
+[20:28:30] [Server thread/INFO]: [LuckPerms] Registered Vault permission & chat hook.
+[20:28:30] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.2.5+57d5ac9
+[20:28:30] [Server thread/INFO]: WEPIF: Vault detected! Using Vault for permissions
+[20:28:30] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.Spigot_v1_16_R3 as the Bukkit adapter
+[20:28:31] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[20:28:31] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[20:28:31] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[20:28:31] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[20:28:31] [Server thread/INFO]: Preparing level "World"
+[20:28:31] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[20:28:31] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[20:28:32] [Server thread/INFO]: Preparing spawn area: 0%
+[20:28:32] [Server thread/INFO]: Preparing spawn area: 0%
+[20:28:32] [Server thread/INFO]: Time elapsed: 832 ms
+[20:28:32] [Server thread/INFO]: [BackToTheRoots] Enabling BackToTheRoots v2.1.0*
+[20:28:32] [Server thread/INFO]:  
+[20:28:32] [Server thread/INFO]: [BTTR] Loading plugin ...
+[20:28:32] [Server thread/INFO]: [BTTR] Loading config ...
+[20:28:32] [Server thread/INFO]: [BTTR] Plugin successfully loaded.
+[20:28:32] [Server thread/INFO]:  
+[20:28:32] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v4.6.2
+[20:28:32] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.16.4/5 (754)
+[20:28:32] [Server thread/WARN]: [ViaVersion] You are running an outdated Java version, please consider updating it to at least Java 17 (your version is 15). At some point in the future, ViaVersion will no longer be compatible with this version of Java.
+[20:28:32] [Server thread/INFO]: [ViaVersion] Registering ProtocolSupport compat connection listener
+[20:28:32] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.5+3827266
+[20:28:33] [Server thread/INFO]: [WorldGuard] (World) TNT ignition is PERMITTED.
+[20:28:33] [Server thread/INFO]: [WorldGuard] (World) Lighters are PERMITTED.
+[20:28:33] [Server thread/INFO]: [WorldGuard] (World) Lava fire is PERMITTED.
+[20:28:33] [Server thread/INFO]: [WorldGuard] (World) Fire spread is UNRESTRICTED.
+[20:28:33] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'World'
+[20:28:33] [Server thread/INFO]: [WorldGuard] Loading region data...
+[20:28:33] [Server thread/INFO]: [CoreProtect] Enabling CoreProtect v19.4
+[20:28:33] [Server thread/INFO]: [CoreProtect] CoreProtect has been successfully enabled!
+[20:28:33] [Server thread/INFO]: [CoreProtect] Using SQLite for data storage.
+[20:28:33] [Server thread/INFO]: --------------------
+[20:28:33] [Server thread/INFO]: [CoreProtect] Enjoy CoreProtect? Join our Discord!
+[20:28:33] [Server thread/INFO]: [CoreProtect] Discord: www.coreprotect.net/discord/
+[20:28:33] [Server thread/INFO]: --------------------
+[20:28:33] [Server thread/INFO]: [Skript] Enabling Skript v2.5.3
+[20:28:34] [ForkJoinPool.commonPool-worker-3/INFO]: [Skript] You're currently running the latest stable version of Skript.
+[20:28:40] [Server thread/INFO]: [Skript] Loaded 128188 aliases in 6831ms
+[20:28:40] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
+[20:28:40] [Server thread/INFO]: [SkBee] Enabling SkBee v1.11.2
+[20:28:40] [Server thread/INFO]: [SkBee] Loading NBTApi...
+[20:28:40] [Server thread/INFO]: [SkBee] [NBTAPI] Found Spigot: v1_16_R3! Trying to find NMS support
+[20:28:40] [Server thread/INFO]: [SkBee] [NBTAPI] NMS support 'MC1_16_R3' loaded!
+[20:28:40] [Server thread/INFO]: [SkBee] [NBTAPI] Found Gson: class com.google.gson.Gson
+[20:28:40] [Server thread/INFO]: [SkBee] Successfully loaded NBTApi!
+[20:28:40] [Server thread/INFO]: [SkBee] NBT Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Recipe Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Scoreboard Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Bound Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Text Component Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Pathfinding Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Structure Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Other Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Virtual Furnace Elements disabled via config
+[20:28:40] [Server thread/INFO]: [SkBee] World Creator Elements successfully loaded
+[20:28:40] [Server thread/INFO]: [SkBee] Successfully enabled v1.11.2 in 0.13 seconds
+[20:28:40] [Server thread/INFO]: [SkBee] Loading custom worlds...
+[20:28:40] [Server thread/INFO]: [SkBee] Successfully loaded 0 custom world
+[20:28:40] [Server thread/INFO]: [SkQuery] Enabling SkQuery v4.1.4
+[20:28:40] [Server thread/INFO]: [skQuery] Locating classes from SkQuery...
+[20:28:41] [Server thread/INFO]: [skQuery] Beginning to process a total of 138 from SkQuery
+[20:28:41] [Server thread/INFO]: [skQuery] Out of 138 classes, 136 classes were loaded from SkQuery
+[20:28:41] [Server thread/INFO]: [Skellett] Enabling Skellett v1.9.11
+[20:28:42] [Server thread/INFO]: [Skellett] Registered 47 Effects, 16 Conditions, 128 Expressions and 25 Events
+[20:28:42] [Server thread/INFO]: [Skellett] Has been enabled!
+[20:28:42] [Server thread/INFO]: [skRayFall] Enabling skRayFall v1.9.23
+[20:28:42] [Server thread/INFO]: [skRayFall] Yay! You are running skRayFall 1.9.23!
+[20:28:42] [Server thread/INFO]: [skRayFall] Nathan and Lewis <3 you.
+[20:28:42] [Server thread/INFO]: [skRayFall] Cooking Bacon...
+[20:28:42] [Server thread/INFO]: [skRayFall] Citizens not found! Sorry you cant make friends, but don't worry we will still be your friend <3
+[20:28:42] [Server thread/INFO]: [skRayFall] Got bacon for the EffectLib particle ninjas!
+[20:28:42] [Server thread/INFO]: [skRayFall] No Votifier Found! *Checks oven for finished bacon*
+[20:28:42] [Server thread/INFO]: [skRayFall] Cooking bacon for the CoreProtect loggers.
+[20:28:42] [Server thread/INFO]: [skRayFall] Enabling general 1.8+ bacon!
+[20:28:42] [Server thread/INFO]: [skRayFall] Getting the general 1.9+ bacon!
+[20:28:42] [Server thread/INFO]: [skRayFall] An update for skRayFall is available!
+[20:28:42] [Server thread/INFO]: [skRayFall] Bacon is ready!
+[20:28:42] [Server thread/INFO]: [TuSKe] Enabling TuSKe v1.8.2-Pikachu-Patch-3-MH-1*
+[20:28:42] [Server thread/INFO]: [TuSKe] Enabling Metrics... Done!
+[20:28:42] [Server thread/INFO]: [TuSKe] Check for updates enabled. It will check in some seconds.
+[20:28:42] [Server thread/INFO]: [TuSKe] Documentation enabled. Some files containing all syntax of all addons will be generated.
+[20:28:42] [Server thread/INFO]: [TuSKe] Loaded 8 events, 12 conditions, 20 effects, 62 expressions and 0 types. Have fun!
+[20:28:43] [Server thread/INFO]: Running delayed init tasks
+[20:28:43] [Server thread/INFO]: [CoreProtect] WorldEdit logging successfully initialized.
+[20:28:43] [Craft Scheduler Thread - 5/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor!
+[20:28:43] [Craft Scheduler Thread - 8/INFO]: [Vault] Checking for Updates ... 
+[20:28:43] [Server thread/INFO]: [Skript] Loading variables...
+[20:28:43] [Craft Scheduler Thread - 8/INFO]: [Vault] No new version available
+[20:28:44] [Thread-23/INFO]: --------------------
+[20:28:44] [Thread-23/INFO]: [CoreProtect] Version 21.3 is now available.
+[20:28:44] [Thread-23/INFO]: [CoreProtect] Download: www.coreprotect.net/download/
+[20:28:44] [Thread-23/INFO]: --------------------
+[20:28:44] [Server thread/INFO]: [Skript] Loaded 84383 variables in 1.5 seconds
+[20:28:46] [Server thread/INFO]: [Skript] All scripts loaded without errors.
+[20:28:46] [Server thread/INFO]: [Skript] Loaded 20 scripts with a total of 57 triggers and 45 commands in 2.38 seconds
+[20:28:46] [Server thread/INFO]: [Skript] Finished loading.
+[20:28:46] [Server thread/INFO]: Done (34.262s)! For help, type "help"
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] ************************************************************
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * WARNING - YOU ARE RUNNING AN OUTDATED VERSION OF JAVA.
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * PAPER WILL STOP BEING COMPATIBLE WITH THIS VERSION OF
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * JAVA WHEN MINECRAFT 1.17 IS RELEASED.
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] *
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * Please update the version of Java you use to run Paper
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * to at least Java 16. When Paper for Minecraft 1.17 is
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * released support for versions of Java before 16 will
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * be dropped.
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] *
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * Current Java version: 15
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] *
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] * Check this forum post for more information: 
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] *   https://papermc.io/java16
+[20:28:46] [Server thread/WARN]: [io.papermc.paper.util.PaperJvmChecker] ************************************************************
+[20:28:47] [Server thread/INFO]: Timings Reset
+[20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Checking for latest update...
+[20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] New update available: v1.8.2
+[20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Check what's new in: https://github.com/Tuke-Nuke/TuSKe/releases/tag/1.8.2
+[20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] You can download and update it with /tuske update.
+[20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Generating documentation of Skript & Addons.
+[20:28:48] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Documentation was generated successfully.

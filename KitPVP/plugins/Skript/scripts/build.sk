@@ -1,0 +1,35 @@
+on join:
+	set {build.%player%} to true
+command /build:
+	trigger:
+		if player has permission "build.use":
+			if {build.%player%} is false:
+				set {build.%player%} to true
+				stop trigger
+			if {build.%player%} is true:
+				set {build.%player%} to false
+				stop trigger
+		else:
+			message "Unknown command. Type ''/help'' for help."
+on break:
+	if player doesn't have permission "build.use":
+		cancel event
+	if player has permission "build.use":
+		if {build.%player%} is true:
+			cancel event
+			message "&cYou cannot break/place with build toggled off"
+			stop 
+		if {build.%player%} is false:
+			set {build.%player%} to false
+			stop
+on place:
+	if player doesn't have permission "build.use":
+		cancel event
+	if player has permission "build.use":
+		if {build.%player%} is true:
+			message "&cYou cannot break/place with build toggled off"
+			cancel event
+			stop
+		if {build.%player%} is false:
+			set {build.%player%} to false
+			stop

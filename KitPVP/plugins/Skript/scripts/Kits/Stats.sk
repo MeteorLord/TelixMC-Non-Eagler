@@ -1,0 +1,115 @@
+command /resetstats [<offlineplayer>]:
+	trigger:
+		if player has permission "reset.stats":
+			if arg-1 is not set:
+				message "/resetstats (player)"
+			if arg-1 is set:
+				set {upgradedI.w.%arg-1%} to false
+				set {coins.%arg-1%} to 0
+				set {kills.%arg-1%} to 0
+				set {killstreak.%arg-1%} to 0
+				set {kquest.%arg-1%} to true
+				set {k2quest.%arg-1%} to false
+				set {k3quest.%arg-1%} to false
+				set {k4quest.%arg-1%} to false
+				set {ksquest.%arg-1%} to true
+				set {ks2quest.%arg-1%} to false
+				set {ks3quest.%arg-1%} to false
+				set {quests.%arg-1%::complete} to 0
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+command /Download:
+	trigger:
+		send formatted "<link:https://youtu.be/gzRFrfMbE9A> &fServer Download <reset>"

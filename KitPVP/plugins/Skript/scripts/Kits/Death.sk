@@ -1,0 +1,51 @@
+on death:
+	if attacker is a player:
+		if victim is a player:
+			message "&6You have been killed by %attacker% &c♥&6%attacker's health%" to victim
+on death of player:
+	set {killstreak.%victim%} to 0
+	heal player by 10 hearts
+	clear player's inventory
+	wait 3 ticks
+	make player execute command "/kits warrior"
+on death:
+	if attacker is a player:
+		if victim is a player:
+			heal player by 3.5 hearts
+			if {extracoins.%attacker%} is false:
+				message "&6You have killed %victim% &6for 10 Coins" to attacker
+				add 10 to {coins.%attacker%}
+				stop			
+			if {extracoins.%attacker%} is true:
+				message "&6You have killed %victim% &6for 17 Coins" to attacker
+				add 17 to {coins.%attacker%}
+				stop
+				
+on death:
+	if attacker is a player:
+		if victim is a player:
+			loop integers between 0 and 41:
+				if slot loop-integer of attacker's inventory is golden apple:
+					if player doesn't have 5 golden apple:
+						give 1 golden apple to attacker
+				
+		
+on damage:
+	repair tool of attacker
+on death:
+	if attacker is a player:
+		if victim is a player:
+			add 1 to {kills.%attacker%}
+			add 1 to {deaths.%victim%}
+			set {killstreak.%victim%} to 0
+			add 1 to {killstreak.%attacker%}
+			
+on death:
+    clear drops
+
+on death:
+    cancel event
+	
+on death:
+    wait 3 ticks
+    teleport player to {spawn}

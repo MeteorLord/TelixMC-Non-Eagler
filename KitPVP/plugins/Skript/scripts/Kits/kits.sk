@@ -1,0 +1,76 @@
+command /kits [<text>]:
+	trigger:
+		if arg-1 is not set:
+			open chest with 1 row named "Select a Kit" to player
+			if {unlocked.w.%player%} is true:
+				set slot 1 of player's current inventory to green stained glass pane named "&6Warrior I" with lore "&8• &7Speed I", "&8• &7Three Gapples" and "&7Unlocked"
+			else:
+				set slot 1 of player's current inventory to red stained glass pane named "&6Warrior I" with lore "&8• &7Three Gapples", "&8• &7Speed I" and "&7Costs: &f1500"
+			if {unlocked.s.%player%} is true:
+				set slot 2 of player's current inventory to green stained glass pane named "&6Speleologist" with lore "&7Unbreaking I Gold-armour", "&8• &7Three Gapples", "&8• &7Golden-Axe Sharpness I" and "&7Unlocked"
+			else:
+				set slot 2 of player's current inventory to red stained glass pane named "&6Speleologist" with lore "&7Unbreaking I Gold-armour", "&8• &7Three Gapples", "&8• &7Golden-Axe Sharpness I" and "&7Costs: &f3200"			
+		if arg-1 is "Warrior":
+			if {upgradedII.s.%player%} is true:
+				set player's chestplate to golden chestplate of unbreaking 1
+				set player's leggings to golden leggings of unbreaking 1
+				set player's boots to golden boots of unbreaking 1
+				set slot 0 of player to gold axe of sharpness 1
+				set slot 1 of player to 3 golden apple
+				stop
+				
+			if {upgradedI.w.%player%} is true:
+				apply speed 1 to player for 99999 seconds
+				set player's helmet to iron helmet
+				set player's chestplate to chain chestplate
+				set player's leggings to chain leggings
+				set player's boots to iron boots
+				set slot 0 of player to wood sword of sharpness 1
+				set slot 1 of player to 3 golden apple
+				stop
+				
+			if {upgradedI.w.%player%} is false:
+				set player's helmet to iron helmet
+				set player's chestplate to chain chestplate
+				set player's leggings to chain leggings
+				set player's boots to iron boots
+				set slot 0 of player to wood sword of sharpness 1
+				set slot 1 of player to 2 golden apple
+				stop			
+#Connected ^			
+command /kit:
+	trigger:
+		make player execute command "/kits"
+			
+#Inventory Events
+on inventory click:
+	if name of player's current inventory is "Select a Kit":
+		cancel event
+on inventory click:
+	if name of player's current inventory is "Select a Kit":
+		if clicked slot is 1:
+			make player execute command "///coincheck upgradeI"
+on inventory click:
+	if name of player's current inventory is "Select a Kit":
+		if clicked slot is 2:
+			make player execute command "///coincheck upgradeII"
+			
+#Join Events
+on join:
+	if {upgradedI.w.%player%} is not set:
+		set {upgradedI.w.%player%} to false
+	if {upgradedII.s.%player%} is not set:
+		set {upgradedII.s.%player%} to false
+on join:
+	clear player's inventory
+	set gamemode of player to survival
+	wait 3 ticks
+	make player execute command "/kits Warrior"
+on first join:
+	if {upgradedI.w.%player%} is not set:
+		set {upgradedI.w.%player%} to false		
+on join:
+	while player is online:
+		loop all players:
+			set score "Health" below player to player's health for loop-player
+		wait 20 ticks
