@@ -4,15 +4,15 @@ Events:
 		Patterns:
 			[on] crafting click in slot %number%
 		Event values:
-			event-inventoryaction
-			event-clicktype
-			event-itemtype
-			event-inventory
-			event-world
 			event-slot
 			event-recipe
+			event-world
+			event-itemtype
+			event-clicktype
 			event-itemstack
 			event-player
+			event-inventoryaction
+			event-inventory
 		Cancellable: true
 Conditions:
 	Is Glowing:

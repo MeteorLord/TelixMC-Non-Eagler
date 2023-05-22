@@ -20,10 +20,10 @@ settings:
   moved-wrongly-threshold: 0.0625
   save-user-cache-on-stop-only: true
   log-villager-deaths: true
-  bungeecord: false
+  bungeecord: true
   timeout-time: 60
   restart-on-crash: true
-  restart-script: ./start.sh
+  restart-script: bash run.sh
   moved-too-quickly-multiplier: 10.0
   attribute:
     maxHealth:
@@ -33,12 +33,13 @@ settings:
     attackDamage:
       max: 2048.0
 messages:
-  whitelist: You are not whitelisted on this server!
-  unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full!
-  outdated-client: Outdated client! Please use {0}
-  outdated-server: Outdated server! I'm still on {0}
-  restart: Server is restarting
+  whitelist: Could not authenticate with TelixMC auth server.
+  unknown-command: Unknown command.
+  server-full: Server is full.
+  outdated-client: Client outdated. Please use minecraft java edition version {0}.
+  outdated-server: Server version is {0}. Please use minecraft java edition versions
+    1.16 to 1.19.
+  restart: Server restarting.
 advancements:
   disable-saving: false
   disabled:

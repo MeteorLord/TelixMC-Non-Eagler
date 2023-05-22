@@ -1,0 +1,229 @@
+options:
+  prefix: &9TelixMC &7»
+
+command /Build:
+	trigger:
+		if player has permission "bukkit.toggleplace":
+			if {build::%player%} is not set:
+				set {build::%player%} to true
+				message "&6Build toggle has been enabled."
+				stop
+			if {build::%player%} is set:
+				delete {build::%player%}
+				message "&6Build toggle has been disabled."
+				stop
+				
+on break:
+	if player doesn't have permission "bukkit.toggleplace":
+		cancel event
+	if player has permission "bukkit.toggleplace":
+		if {build::%player%} is not set:
+			message "&cYou can't place/break whilist build is off."
+			cancel event
+
+on place:
+	if player doesn't have permission "bukkit.toggleplace":
+		cancel event
+	if player has permission "bukkit.toggleplace":
+		if {build::%player%} is not set:
+			message "&cYou can't place/break whilist build is off."
+			cancel event
+
+
+command /creative [<player>]:
+    permission: Creative.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to Creative
+            send "&6Set &cGamemode &6was set to &ccreative"
+        if arg-1 is set:
+            set gamemode of arg 1 to Creative
+            send "&6%Player% &6set your gamemode was set to &ccreative"
+
+command /survival [<player>]:
+    permission: Survival.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to Survival
+            send "&6Set &cGamemode &6was set to &csurvival"
+        if arg-1 is set:
+            set gamemode of arg 1 to Survival
+            send "&6%Player% &6set your gamemode was set to &csurvival"
+			
+command /spectator [<player>]:
+    permission: spectator.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to spectator
+            send "&6Set &cGamemode &6was set to &cspectator"
+        if arg-1 is set:
+            set gamemode of arg-1 to spectator
+            send "&6%player% &6set your gamemode was set to &cspectator"
+			
+command /adventure [<player>]:
+    permission: spectator.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to adventure
+            send "&6Set &cGamemode &6was set to &cadventure"
+        if arg-1 is set:
+            set gamemode of arg-1 to adventure
+            send "&6%player% &6set your gamemode was set to &cadventure"
+			
+command /gmsp [<player>]:
+    permission: Creative.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to spectator
+            send "&6Set &cGamemode &6was set to &cspectator"
+        if arg-1 is set:
+            set gamemode of arg-1 to spectator
+            send "&6%player% &6set your gamemode was set to &cspectator"
+			
+command /gma [<player>]:
+    permission: Creative.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to adventure
+            send "&6Set &cGamemode &6was set to &cadventure"
+        if arg-1 is set:
+            set gamemode of arg-1 to adventure
+            send "&6%player% &6set your gamemode was set to &cadventure"
+
+command /gmc [<player>]:
+    permission: Creative.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to Creative
+            send "&6Set &cGamemode &6was set to &ccreative"
+        if arg-1 is set:
+            set gamemode of arg-1 to Creative
+            send "&6%player% &6set your gamemode was set to &ccreative"
+
+command /gms [<player>]:
+    permission: Creative.gamemode
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            set gamemode of player to survival
+            send "&6Set &cGamemode &6was set to &csurvival"
+        if arg-1 is set:
+            set gamemode of arg-1 to survival
+            send "&6%player% &6Set your gamemode was set to &csurvival"
+			
+command /gamemode <text> [<player>]:
+    permission: gamemode.use
+    permission message: Unknown command. Type ''/help'' for help.
+    aliases: /gm
+    usage: &c/gamemode &fcreative , survival , adventure , spectator
+    trigger:
+        if arg-2 isn't set:
+            if arg-1 is "c" or "creative" or "1":
+                send "{@prefix} &6Set &cGamemode &6was set to &ccreative"
+                set player's gamemode to creative
+            if arg-1 is "s" or "survival" or "0":
+                send "{@prefix} &6Set &cGamemode &6was set to &csurvival"
+                set player's gamemode to survival
+            if arg-1 is "a" or "adventure" or "2":
+                send "{@prefix} &6Set &cGamemode &6was set to &cadventure"
+                set player's gamemode to adventure
+            if arg-1 is "3" or "spectator" or "3":
+                send "{@prefix} &6Set &cGamemode &6was set to &cspectator"
+                set player's gamemode to spectator
+        else:
+            if arg-1 is "c" or "creative" or "1":
+                send "{@prefix} &6%player% &6set your gamemode was set to &ccreative"
+                set arg-2's gamemode to creative
+            if arg-1 is "s" or "survival" or "0":
+                send "{@prefix} &6%player% &6set your gamemode was set to &csurvival"
+                set arg-2's gamemode to survival
+            if arg-1 is "a" or "adventure" or "2":
+                send "{@prefix} &6%player% &6set your gamemode was set to &cadventure"
+                set arg-2's gamemode to adventure
+            if arg-1 is "3" or "spectator" or "3":
+                send "{@prefix} &6%player% &6set your gamemode was set to &cspectator"
+                set arg-2's gamemode to spectator
+
+
+command /fly [<player>]:
+    permission: Fly.use
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        if arg-1 isn't set:
+            if {fly.%player's uuid%} isn't set:
+                set player's flight mode to true
+                Set {fly.%player's uuid%} to true
+                send "{@prefix} %player% &7has set fly to &aTrue"
+            else:
+                set player's flight mode to false
+                delete {fly.%player's uuid%}
+                send "{@prefix} %player% &7has set fly to &cFalse"
+        if arg-1 is set:
+            if {fly.%arg-1's uuid%} isn't set:
+                set arg-1's flight mode to true
+                Set {fly.%arg-1's uuid%} to true
+                send "{@prefix} %player% has set &7%arg-1%'s fly to &aTrue!"
+            else:
+                set arg-1's flight mode to false
+                delete {fly.%arg-1's uuid%}
+
+
+command /bc [<text>]:
+  permission: server.bc
+  trigger:
+    if arg-1 is set:
+      broadcast "{@prefix} &f%colored arg-1%"
+    else:
+      send "{@prefix} &cPlease provide an argument!"
+	  
+command /broadcast [<text>]:
+  permission: server.bc
+  trigger:
+    if arg-1 is set:
+      broadcast "{@prefix} &f%colored arg-1%"
+    else:
+      send "{@prefix} &cPlease provide an argument!"
+
+		
+command /clear:
+    aliases: /clearinventory , /ci
+    permission: Clear.use
+    permission message: Unknown command. Type ''/help'' for help.
+    trigger:
+        clear player's inventory
+        send "&6Cleared inventory"
+
+command /tp <player> [<player>]:
+    permission: Tp.player
+    permission message: Unknown command. Type ''/help'' for help.
+    aliases: /teleport
+    trigger: 
+        if arg-2 is not set:
+            teleport player to arg-1
+            send "&6Teleport to &6%arg-1%"
+        if arg-2 is set:
+            teleport arg-1 to arg-2
+            send "&6Teleport to &6%arg-1%"
+
+command /setspawn:
+	trigger:
+		if player has permission "set.spawn":
+			set {spawn} to location of player
+
+command /spawn:
+	trigger:
+		teleport player to {spawn}
+				
+on join:
+	set player's walk speed to 0.2
+	teleport player to {spawn}
+
+on chat:
+  set the chat format to "%player's prefix%&f%player%: &f%message%"
