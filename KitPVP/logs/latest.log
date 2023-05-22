@@ -181,3 +181,37 @@
 [20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] You can download and update it with /tuske update.
 [20:28:47] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Generating documentation of Skript & Addons.
 [20:28:48] [Craft Scheduler Thread - 4/INFO]: [TuSKe] Documentation was generated successfully.
+[20:31:56] [Server thread/INFO]: Stopping server
+[20:31:56] [Server thread/INFO]: [TuSKe] Disabling TuSKe v1.8.2-Pikachu-Patch-3-MH-1
+[20:31:56] [Server thread/INFO]: [skRayFall] Disabling skRayFall v1.9.23
+[20:31:56] [Server thread/INFO]: [skRayFall] Bacon has been eaten. Make some more soon!
+[20:31:56] [Server thread/INFO]: [Skellett] Disabling Skellett v1.9.11
+[20:31:56] [Server thread/INFO]: [SkQuery] Disabling SkQuery v4.1.4
+[20:31:56] [Server thread/INFO]: [SkBee] Disabling SkBee v1.11.2
+[20:31:56] [Server thread/INFO]: [Skript] Disabling Skript v2.5.3
+[20:31:56] [Server thread/INFO]: [CoreProtect] Disabling CoreProtect v19.4
+[20:31:56] [Server thread/INFO]: [CoreProtect] Finishing up data logging. Please wait...
+[20:31:57] [Server thread/INFO]: [CoreProtect] Success! Disabled CoreProtect v19.4
+[20:31:57] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.5+3827266
+[20:31:57] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[20:31:57] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.2.5+57d5ac9
+[20:31:57] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[20:31:57] [Server thread/INFO]: [Vault] Disabling Vault v1.7.3-b131
+[20:31:57] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.3.47
+[20:31:57] [Server thread/INFO]: [LuckPerms] Starting shutdown process...
+[20:31:57] [Server thread/INFO]: [LuckPerms] Closing storage...
+[20:31:57] [Server thread/INFO]: [LuckPerms] Goodbye!
+[20:31:57] [Server thread/INFO]: [ViaRewind] Disabling ViaRewind v2.0.3
+[20:31:57] [Server thread/INFO]: [ViaVersion] Disabling ViaVersion v4.6.2
+[20:31:57] [Server thread/INFO]: [ViaVersion] ViaVersion is disabling, if this is a reload and you experience issues consider rebooting.
+[20:31:57] [Server thread/INFO]: [ProtocolSupport] Disabling ProtocolSupport v1.16.5-3
+[20:31:57] [Server thread/INFO]: [BackToTheRoots] Disabling BackToTheRoots v2.1.0
+[20:31:57] [Server thread/INFO]: Saving players
+[20:31:57] [Server thread/INFO]: Saving worlds
+[20:31:57] [Server thread/INFO]: Saving chunks for level 'ServerLevel[World]'/minecraft:overworld
+[20:31:57] [Server thread/INFO]: ThreadedAnvilChunkStorage (World): All chunks are saved
+[20:31:57] [Server thread/INFO]: ThreadedAnvilChunkStorage (World): All chunks are saved
+[20:31:58] [Server thread/INFO]: Saving usercache.json
+[20:31:58] [Server thread/INFO]: Flushing Chunk IO
+[20:31:58] [Server thread/INFO]: Closing Thread Pool
+[20:31:58] [Server thread/INFO]: Closing Server
